@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <LangVersion>8</LangVersion>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Platform\src\Platform.Domain\Platform.Domain.csproj" />
+      <ProjectReference Include="..\PizzaPie.Domain\PizzaPie.Domain.csproj" />
+    </ItemGroup>
+
+</Project>

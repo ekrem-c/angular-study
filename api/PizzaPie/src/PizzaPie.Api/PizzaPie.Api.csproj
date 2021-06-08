@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <LangVersion>9</LangVersion>
+        <Company>Braingrape</Company>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Platform\src\Platform.Api\Platform.Api.csproj" />
+      <ProjectReference Include="..\PizzaPie.Abstractions\PizzaPie.Abstractions.csproj" />
+      <ProjectReference Include="..\PizzaPie.Common\PizzaPie.Common.csproj" />
+      <ProjectReference Include="..\PizzaPie.Domain\PizzaPie.Domain.csproj" />
+      <ProjectReference Include="..\PizzaPie.Messaging\PizzaPie.Messaging.csproj" />
+      <ProjectReference Include="..\PizzaPie.Repository\PizzaPie.Repository.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Controllers\EntryFoodsController.cs">
+        <DependentUpon>OrdersController.cs</DependentUpon>
+      </Compile>
+      <Compile Update="Controllers\EntryMealsController.cs">
+        <DependentUpon>OrdersController.cs</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>
